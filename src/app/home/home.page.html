@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inicio</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+<p class="ion-text" style="color: rgb(48, 48, 155); padding-left: 20px">Eventos</p>
+
+<ion-slides class="my-slides" pager="true" scrollbar="true" autoplay="true" speed="20">
+
+  <ion-slide *ngFor="let images2 of images2">
+    <ion-card>
+      <ion-img [src]="images2.src"></ion-img>
+      <ion-card-header>
+        <ion-card-title>{{ images2.fecha }}</ion-card-title>
+        <ion-card-subtitle>{{ images2.title }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p class="descripcion">{{ images2.descripcion }}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-slide>
+</ion-slides>
+
+<p class="ion-text" style="color: rgb(48, 48, 155); padding-left: 20px; padding-top: 20px;">Nuestras marcas</p>
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row style="padding-left: 10px; padding-right: 10px;">
+      <ion-col size="3" size-md="2" *ngFor="let images of images">
+        <ion-card>
+          <img [src]="images.src">
+          <ion-card-content>
+            <ion-card-title [innerHTML]="images.alt" style="font-size: 10px;"></ion-card-title>
+          </ion-card-content>
+
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
