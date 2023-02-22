@@ -1,0 +1,7 @@
+{
+  "name": "Comerciantes_Restrepo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
