@@ -19,6 +19,7 @@ img {
 .my-slides {
     height: 400px;
     width: 90%;
+    
 
 }
 ion-slide {
@@ -26,15 +27,41 @@ ion-slide {
 }
 
 ion-card-title {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: bold;
+    color:black;
 }
 
 ion-card-subtitle {
-    font-size: 16px;
+    font-size: 10px;
     font-weight: bold;
+    color: grey;
+    
+}
+
+.card-description {
+    height: 100px;
+    overflow-y: scroll;
 }
 
 .descripcion {
     font-size: 12px;
+    color: grey;
+    padding-bottom: 30px;
+}
+
+.swiper-pagination {
+    bottom: 10px;
+}
+
+.swiper-pagination-bullet {
+    background-color: white;
+    opacity: 0.5;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
 }

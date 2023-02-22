@@ -11,6 +11,14 @@ import { IonSlides } from '@ionic/angular';
 })
 export class HomePage implements OnInit {
 
+  slideOpts = {
+    initialSlide: 0,
+    speed: 400,
+    autoplay: {
+      delay: 4000,
+    }
+  };
+
   public images2 = [
     {
       src: 'https://totalreporter.com/wp-content/uploads/2022/02/Imagenes-del-dia-de-la-mujer-2022.jpg',
@@ -22,7 +30,7 @@ export class HomePage implements OnInit {
     {
       src: 'https://www.conmishijos.com/uploads/diamadre-p.jpg',
       title: "Dia de la madre",
-      descripcion: "Día de la madreeeeee",
+      descripcion: "Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee Día de la madreeeeee  ",
       fecha: "10 de mayo de 2023",
     },
     {
