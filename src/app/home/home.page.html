@@ -1,35 +1,33 @@
-<ion-header >
-  <ion-toolbar>
-    <ion-title>Inicio</ion-title>
-
-  </ion-toolbar>
-</ion-header>
 
 
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons class="logo" slot="start">
+        <img class="logo" src="assets/icon/logo_f.png" alt="Logo de la aplicación">
+      </ion-buttons>
+      <ion-title class="toolbar-title">Comerciantes Restrepo</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-<p class="ion-text" style=" padding-left: 20px; font-weight: bold">Eventos</p>
 
 <ion-slides class="my-slides" [options]="slideOpts" pager="true" scrollbar="true">
-
   <ion-slide *ngFor="let images2 of images2">
-    <ion-card>
-      <ion-img [src]="images2.src"></ion-img>
+    <ion-card class="card">
+
+      <ion-img class="imagen" [src]="images2.src"></ion-img>
+
       <ion-card-header>
         <ion-card-subtitle>{{ images2.fecha }}</ion-card-subtitle>
         <ion-card-title>{{ images2.title }}</ion-card-title>
+      
       </ion-card-header>
-      <div class="card-description">
-        <ion-card-content>
-          <p class="descripcion">{{ images2.descripcion }}</p>
-          
-
-        </ion-card-content>
-      </div>
     </ion-card>
+    
   </ion-slide>
 </ion-slides>
+<div class="swiper-pagination"></div>
 
-<p class="ion-text" style=" padding-left: 20px; padding-top: 20px; font-weight: bold;">Nuestras
+<p class="text" style=" color:rgb(0, 0, 0); text-align: center; padding-left: 20px; padding-top: 7px; padding-bottom: 7px; font-weight: bold;">Nuestras
   marcas</p>
 
 

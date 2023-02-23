@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
@@ -10,7 +10,7 @@ import { businesses } from '../imagenes';
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
-  encapsulation: ViewEncapsulation.None
+  
 
 })
 export class HomePage implements OnInit {
@@ -18,7 +18,8 @@ export class HomePage implements OnInit {
   imagenes: any;
 
   slideOpts = {
-    initialSlide: 0,
+    
+
     speed: 400,
     autoplay: {
       delay: 4000,
@@ -27,7 +28,7 @@ export class HomePage implements OnInit {
 
   public images2 = [
     {
-      src: 'https://totalreporter.com/wp-content/uploads/2022/02/Imagenes-del-dia-de-la-mujer-2022.jpg',
+      src: 'https://www.elpulsodeltiempo.co/wp-content/uploads/2021/03/feliz-dia-mujer.jpg',
       title: "Día de la mujer",
       descripcion: "Evento del día de la mujer en Restrepo Valle",
       fecha: "8 de marzo de 2023",
