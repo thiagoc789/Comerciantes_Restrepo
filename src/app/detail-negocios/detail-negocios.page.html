@@ -1,0 +1,32 @@
+<!-- detail.page.html -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Detalle Del Negocio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+      <ion-img [src]="imagen.url"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>{{ imagen.location }}</ion-card-subtitle>
+        <ion-card-title>{{ imagen.title }}</ion-card-title>
+      </ion-card-header>
+      <div class="card-description">
+        <ion-card-content>
+          <p class="descripcion">{{ imagen.description }}</p>
+          <p class="descripcion">{{ imagen.phone }}</p>
+    
+        </ion-card-content>
+      </div>
+    </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+Footer
+  </ion-toolbar>
+</ion-footer>

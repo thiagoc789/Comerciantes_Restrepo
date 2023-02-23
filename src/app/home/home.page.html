@@ -12,35 +12,32 @@
     <ion-card>
       <ion-img [src]="images2.src"></ion-img>
       <ion-card-header>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-button-next"></div>
         <ion-card-subtitle>{{ images2.fecha }}</ion-card-subtitle>
-
         <ion-card-title>{{ images2.title }}</ion-card-title>
       </ion-card-header>
-
       <div class="card-description">
-      <ion-card-content>
-        <p class="descripcion">{{ images2.descripcion }}</p>
+        <ion-card-content>
+          <p class="descripcion">{{ images2.descripcion }}</p>
 
-      </ion-card-content>
+        </ion-card-content>
       </div>
     </ion-card>
   </ion-slide>
 </ion-slides>
 
-<p class="ion-text" style="color: rgb(48, 48, 155); padding-left: 20px; padding-top: 20px; font-weight: bold;">Nuestras marcas</p>
+<p class="ion-text" style="color: rgb(48, 48, 155); padding-left: 20px; padding-top: 20px; font-weight: bold;">Nuestras
+  marcas</p>
 
 
 <ion-content>
   <ion-grid>
     <ion-row style="padding-left: 10px; padding-right: 10px;">
-      <ion-col size="3" size-md="2" *ngFor="let images of images">
-        <ion-card>
-          <img [src]="images.src">
-          <ion-card-content>
-            <ion-card-title [innerHTML]="images.alt" style="font-size: 10px;"></ion-card-title>
-          </ion-card-content>
+      <ion-col size="3" size-md="2" *ngFor="let imagenes of imagenes">
+        <ion-card class="cardNegocios" (click)="goToDetail(imagenes.id)">
+          <img [src]="imagenes.url">
+          <!-- <ion-card-content>
+           <ion-card-title [innerHTML]="imagenes.title" style="font-size: 10px;"></ion-card-title>
+          </ion-card-content>-->
 
         </ion-card>
       </ion-col>

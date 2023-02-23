@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { IonSlides } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+import { businesses } from '../imagenes';
 
 
 
@@ -10,6 +13,8 @@ import { IonSlides } from '@ionic/angular';
 
 })
 export class HomePage implements OnInit {
+
+  imagenes: any;
 
   slideOpts = {
     initialSlide: 0,
@@ -65,31 +70,21 @@ export class HomePage implements OnInit {
     },
   ];
 
-  imagesCard = [
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-    'https://via.placeholder.com/150',
-  ];
 
-  constructor() { }
+  constructor(private navCtrl: NavController, private route: ActivatedRoute, private router: Router,) { }
+
 
   ngOnInit() {
 
+    this.imagenes = businesses;
+
+    
+
+  }
+  goToDetail(imageId: number) {
+    //this.navCtrl.navigateForward(['/detail-negocios', id]);
+    this.router.navigateByUrl(`/detail-negocios/${imageId}`);
+   
   }
 
 }
