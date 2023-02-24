@@ -8,9 +8,6 @@ ion-buttons img {
     padding: 0 10px;
 }
 
-ion-toolbar ion-title .logo {
-    margin-right: 100px;
-}
 
 .tolbar{
     border-bottom: 1px solid black;
@@ -20,7 +17,6 @@ ion-toolbar ion-title .logo {
 .imagen {
     width: 400px;
     height: 300px;
-    /* ajusta el tamaño de la imagen como desees */
     object-fit: cover;
     box-shadow: 1px 3px 8px rgba(156, 8, 8, 0.25);
 }

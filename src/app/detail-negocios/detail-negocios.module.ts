@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -15,6 +16,7 @@ import { DetailNegociosPage } from './detail-negocios.page';
     IonicModule,
     DetailNegociosPageRoutingModule
   ],
-  declarations: [DetailNegociosPage]
+  declarations: [DetailNegociosPage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class DetailNegociosPageModule {}

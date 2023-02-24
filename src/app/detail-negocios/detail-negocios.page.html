@@ -2,31 +2,31 @@
 
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Detalle Del Negocio
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button class="flecha-atras" text="" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">Detalle del negocio</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card>
-      <ion-img [src]="imagen.url"></ion-img>
-      <ion-card-header>
-        <ion-card-subtitle>{{ imagen.location }}</ion-card-subtitle>
-        <ion-card-title>{{ imagen.title }}</ion-card-title>
-      </ion-card-header>
-      <div class="card-description">
-        <ion-card-content>
-          <p class="descripcion">{{ imagen.description }}</p>
-          <p class="descripcion">{{ imagen.phone }}</p>
-    
-        </ion-card-content>
-      </div>
-    </ion-card>
+  <ion-card class="card">
+    <ion-img class="imagen" [src]="imagen.url"></ion-img>
+    <ion-card-header>
+      <ion-card-title>{{ imagen.title }}</ion-card-title>
+      <p class="descripcion">{{ imagen.description }}</p>
+      <a href="tel:{{imagen.phone}}"><p class="descripcion"> <ion-icon name="call"></ion-icon> {{ imagen.phone }}</p></a>
+      <p class="descripcion"> <ion-icon name="person"></ion-icon>
+        {{ imagen.owner }}</p>
+        <a href="https://api.whatsapp.com/send?phone=+57{{imagen.phone}}">
+              <img class="logowp" src="https://cdn-icons-png.flaticon.com/512/2504/2504957.png" alt="Logo de la aplicación"></a>
+              <a href="{{imagen.instagram}}">
+              <img class="logowp" src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Logo de la aplicación"></a>
+      <ion-card-subtitle> <ion-icon name="pin"></ion-icon> {{ imagen.location }}</ion-card-subtitle>
+
+    </ion-card-header>
+
+  </ion-card>
+
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar>
-Footer
-  </ion-toolbar>
-</ion-footer>
