@@ -1,5 +1,7 @@
 export const businesses = [
     {
+        lat: -72.0000000,
+        lng: 4.0000000,
         id: 1,
         title: 'Negocio 1',
         description: 'Este es mi negocio número 1',
@@ -10,6 +12,8 @@ export const businesses = [
         instagram: 'https://www.instagram.com/instagram/'
     },
     {
+        lat: -72.0000000,
+        lng: 4.0000000,
         id: 2,
         title: 'Negocio 2',
         description: 'Este es mi negocio número 2',
@@ -20,6 +24,8 @@ export const businesses = [
         instagram: 'https://www.instagram.com/instagram/'
     },
     {
+        lat: -72.0000000,
+        lng: 4.0000000,
         id: 3,
         title: 'Negocio 3',
         description: 'Este es mi negocio número 3',
@@ -30,6 +36,8 @@ export const businesses = [
         instagram: 'https://www.instagram.com/instagram/'
     },
     {
+        lat: -72.0000000,
+        lng: 4.0000000,
         id: 4,
         title: 'Negocio 4',
         description: 'Este es mi negocio número 4',
@@ -41,6 +49,8 @@ export const businesses = [
         url: 'https://static.vecteezy.com/system/resources/thumbnails/004/677/652/small/logo-color-design-template-in-spiral-ellipse-luxury-logo-isolated-on-black-background-for-company-business-hotel-fashion-etc-creative-elegant-concept-illustration-free-vector.jpg'
     },
     {
+        lat: -72.0000000,
+        lng: 4.0000000,
         id: 5,
         title: 'Negocio 5',
         description: 'Este es mi negocio número 5',

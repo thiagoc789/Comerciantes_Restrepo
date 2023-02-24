@@ -1,17 +1,18 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title>map</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <google-map height="90%" width="90%" [center]="center" >
+<map-marker [options]="markerOptions"></map-marker>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+
+  </google-map>
+
+
 </ion-content>
