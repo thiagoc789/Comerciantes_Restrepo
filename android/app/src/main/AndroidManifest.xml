@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+ 
+
         <activity
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
             android:name="io.ionic.starter.MainActivity"
@@ -33,6 +35,12 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths"></meta-data>
+
+                <meta-data
+                
+                android:name="com.google.android.geo.AIzaSyBO-UGpyBD55KeTUJsOGbxI4ttmUXJ5ybY"
+                
+                android:value="YOUR_ANDROID_MAPS_AIzaSyBO-UGpyBD55KeTUJsOGbxI4ttmUXJ5ybY" />
         </provider>
     </application>
 
