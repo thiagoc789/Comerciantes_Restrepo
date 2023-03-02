@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.ionic.starter">
+    package="com.comerciantes.comerciantesrestrepo">
 
     <application
         android:allowBackup="true"
@@ -10,11 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
- 
+
 
         <activity
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
-            android:name="io.ionic.starter.MainActivity"
+            android:name="com.comerciantes.comerciantesrestrepo.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBarLaunch"
             android:launchMode="singleTask"
@@ -37,9 +37,9 @@
                 android:resource="@xml/file_paths"></meta-data>
 
                 <meta-data
-                
+
                 android:name="com.google.android.geo.AIzaSyBO-UGpyBD55KeTUJsOGbxI4ttmUXJ5ybY"
-                
+
                 android:value="YOUR_ANDROID_MAPS_AIzaSyBO-UGpyBD55KeTUJsOGbxI4ttmUXJ5ybY" />
         </provider>
     </application>

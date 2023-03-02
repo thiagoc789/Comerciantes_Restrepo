@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package com.comerciantes.comerciantesrestrepo;
 
 import com.getcapacitor.BridgeActivity;
 
