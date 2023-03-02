@@ -3,6 +3,7 @@ import { NavController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { businesses } from '../imagenes';
+import { FirestoreService } from '../services/firestore.service';
 
 
 
@@ -73,12 +74,13 @@ export class HomePage implements OnInit {
   ];
 
 
-  constructor(private navCtrl: NavController, private route: ActivatedRoute, private router: Router,) { }
+  constructor(private navCtrl: NavController, private route: ActivatedRoute, private router: Router, private firestore: FirestoreService) { }
 
 
   ngOnInit() {
 
     this.imagenes = businesses;
+    this.firestore.getCollection()
 
     
 
