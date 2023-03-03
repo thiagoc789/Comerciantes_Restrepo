@@ -1,18 +1,15 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>map</ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <google-map height="90%" width="90%" [center]="center" >
-<map-marker [options]="markerOptions"></map-marker>
+  <ion-grid>
+    <ion-row style="padding-left: 10px; padding-right: 10px;">
+      <ion-col size="3" size-md="2" *ngFor="let imagenes of negocios">
+        <ion-card class="cardNegocios" >
+           <ion-card-content>
+           <ion-card-title [innerHTML]="imagenes.nombre" style="font-size: 10px;"></ion-card-title>
+          </ion-card-content>
 
-
-  </google-map>
-
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

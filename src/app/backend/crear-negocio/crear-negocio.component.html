@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Crear Nuevo Negocio
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-list>
+      <ion-item>
+        <ion-label>ID:</ion-label>
+        <ion-input [(ngModel)]="negocio.id" type="text" name="id"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Nombre:</ion-label>
+        <ion-input [(ngModel)]="negocio.nombre" type="text" name="nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Descripcion:</ion-label>
+        <ion-input [(ngModel)]="negocio.descripcion"  type="text" name="descripcion" ></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="block" class="botonCrear" (click)="crearNuevoNegocio()" type="submit">Enviar</ion-button>
+  </form>
+</ion-content>
+

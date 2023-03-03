@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { CrearNegocioComponent } from './backend/crear-negocio/crear-negocio.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,9 @@ const routes: Routes = [
   {
     path: 'detail-negocios/:id',
     loadChildren: () => import('./detail-negocios/detail-negocios.module').then( m => m.DetailNegociosPageModule)
+  },
+  {
+    path: 'crearNegocio', component: CrearNegocioComponent
   },
 ];
 @NgModule({

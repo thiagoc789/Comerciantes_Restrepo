@@ -50,39 +50,16 @@ export class HomePage implements OnInit {
   ];
 
 
-  images = [
-    {
-      src: 'https://www.tooltyp.com/wp-content/uploads/2014/10/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg',
-      alt: 'Negocio 1',
-    },
-    {
-      src: 'https://via.placeholder.com/300x200',
-      alt: 'Negocio 2',
-    },
-    {
-      src: 'https://www.tooltyp.com/wp-content/uploads/2014/10/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg',
-      alt: 'Negocio 3',
-    },
-    {
-      src: 'https://via.placeholder.com/300x200',
-      alt: 'Negocio 4',
-    },
-    {
-      src: 'https://www.tooltyp.com/wp-content/uploads/2014/10/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg',
-      alt: 'Negocio 5',
-    },
-  ];
-
-
   constructor(private navCtrl: NavController, private route: ActivatedRoute, private router: Router, private firestore: FirestoreService) { }
 
 
   ngOnInit() {
 
     this.imagenes = businesses;
-    this.firestore.getCollection()
-
-    
+    this.firestore.getCollection('Pruebas').subscribe(res => {
+      console.log(res)
+    })
+  
 
   }
   goToDetail(imageId: number) {

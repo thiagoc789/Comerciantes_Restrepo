@@ -8,16 +8,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
+import { CrearNegocioComponent } from './backend/crear-negocio/crear-negocio.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, CrearNegocioComponent],
   imports: 
-  [BrowserModule, 
+  [BrowserModule,
+      FormsModule, 
     IonicModule.forRoot(), 
     AppRoutingModule, 
-    AngularFireModule.initializeApp(environment.firebaseConfig), 
+    AngularFireModule.initializeApp(environment.firebaseConfig,), 
 ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

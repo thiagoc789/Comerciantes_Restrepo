@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Geolocation } from '@capacitor/geolocation';
-import { businesses } from '../imagenes';
-
+import { Negocios } from '../models/models';
+import { FirestoreService } from '../services/firestore.service';
 
 
 @Component({
@@ -11,37 +10,27 @@ import { businesses } from '../imagenes';
 })
 export class Tab1Page implements OnInit {
 
-  center: google.maps.LatLngLiteral  = { lat: 0, lng: 0 };
-  marcadores: any;
-  markerOptions: google.maps.MarkerOptions = {};
+  negocios: Negocios[];
 
-  constructor() {}
+
+  constructor(private database: FirestoreService) {}
 
   ngOnInit() {
-    this.getPosition(); 
-    this.marcadores = businesses;
-    this.markerOptions = {
-      position: {
-        lat: -72.0000000,
-        lng: 4.0000000
-      },
-      title: 'Mi marcador',
-      icon: {
-        url: this.marcadores[0].url
-      }
-    };
-    
-  }  
+    this.getNegocios()
 
-  async getPosition() {
-    const coordinates = await Geolocation.getCurrentPosition();
-    console.log(coordinates)
-    this.center = {
-      lat: coordinates.coords.latitude,
-      lng: coordinates.coords.longitude,  
-      
-    }  
   }
+
+  getNegocios(){
+
+    this.database.getCollection<Negocios>('Pruebas').subscribe(res => {
+      console.log('esta es la lectura', res)
+      this.negocios = res;
+      console.log('Negocios = ', this.negocios)
+    })
+
+  }
+
+
   
 
 
